@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "User profile document containing account metadata and preferences",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Firebase Authentication UID"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Full name or screen name"
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "Profile avatar image URL"
+        },
+        "emailVerified": {
+          "type": "boolean",
+          "description": "Verification status of user email"
+        },
+        "role": {
+          "type": "string",
+          "description": "User role: user or admin"
+        },
+        "bio": {
+          "type": "string",
+          "description": "Short user bio or description"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Account registration ISO timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last profile modification ISO timestamp"
+        }
+      },
+      "required": ["userId", "email"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Private user profile documents restricted to the authenticated owner"
+    }
+  }
+}

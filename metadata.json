@@ -1,0 +1,6 @@
+{
+  "name": "AquaAlert Auth - Firebase User Management",
+  "description": "Secure user registration, login, email verification, and account management powered by Firebase Auth.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
